@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
-import Header from "../app/header/index.jsx";
-import Footer from "../app/footer/index.jsx";
+import Header from "./components/header/index.jsx";
+import Footer from "./components/footer/index.jsx";
+import HeroSection from "./components/heroSection/index.jsx";
 
 export default function Home() {
   // Array de dados dos memes para serem passados como props
@@ -169,43 +170,17 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* COMPONENTE: Header */}
-    <Header />
+      <Header />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           {/* COMPONENTE: HeroSection */}
-          <section className={styles.heroSection}>
-            <div className={styles.heroContent}>
-              <span className={styles.heroTag}>Meme do Dia</span>
-              <h2 className={styles.heroTitle}>{memeOfTheDay.title}</h2>
-              <p className={styles.heroDescription}>
-                {memeOfTheDay.description}
-              </p>
-              <div className={styles.heroAuthor}>
-                <img
-                  src={memeOfTheDay.authorAvatar}
-                  alt={memeOfTheDay.author}
-                />
-                <span>Por {memeOfTheDay.author}</span>
-              </div>
-              <div className={styles.heroStats}>
-                <span>❤️ {memeOfTheDay.likes}</span>
-                <span>💬 {memeOfTheDay.comments}</span>
-              </div>
-              <button className={styles.heroButton}>Ver meme completo</button>
-            </div>
-            <div className={styles.heroImageContainer}>
-              <img
-                src={memeOfTheDay.image}
-                alt={memeOfTheDay.title}
-                className={styles.heroImage}
-              />
-            </div>
-          </section>
+          <HeroSection />
           {/* FIM COMPONENTE: HeroSection */}
-
+      
           {/* COMPONENTE: CategoriesSection */}
+
           <section className={styles.categoriesSection}>
             <h2 className={styles.sectionTitle}>Explore por Categorias</h2>
             <div className={styles.categoriesGrid}>
