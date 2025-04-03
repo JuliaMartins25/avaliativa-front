@@ -1,4 +1,4 @@
-import styles from "./herosection.module.css";
+import styles from "./feed.module.css";
 import MemeCard from "../memecard";
 
 
