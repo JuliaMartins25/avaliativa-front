@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Header from "./components/header/index.jsx";
 import Footer from "./components/footer/index.jsx";
 import HeroSection from "./components/heroSection/index.jsx";
+import MemeCard from "./components/memecard/index.jsx";
 
 export default function Home() {
   // Array de dados dos memes para serem passados como props
@@ -178,7 +179,7 @@ export default function Home() {
           {/* COMPONENTE: HeroSection */}
           <HeroSection />
           {/* FIM COMPONENTE: HeroSection */}
-      
+
           {/* COMPONENTE: CategoriesSection */}
 
           <section className={styles.categoriesSection}>
@@ -212,32 +213,11 @@ export default function Home() {
 
             <div className={styles.feedGrid}>
               {/* Aqui mapeamos os memes do array para criar múltiplos cards */}
-              {memes.map((meme) => (
+      
                 // COMPONENTE: MemeCard
-                <div key={meme.id} className={styles.memeCard}>
-                  <div className={styles.memeCardHeader}>
-                    <div className={styles.memeAuthor}>
-                      <img src={meme.authorAvatar} alt={meme.author} />
-                      <span>{meme.author}</span>
-                    </div>
-                    <span className={styles.memeCategory}>{meme.category}</span>
-                  </div>
-                  <img
-                    src={meme.image}
-                    alt={meme.title}
-                    className={styles.memeImage}
-                  />
-                  <div className={styles.memeContent}>
-                    <h3 className={styles.memeTitle}>{meme.title}</h3>
-                    <p className={styles.memeDescription}>{meme.description}</p>
-
-                    {/* COMPONENTE: InteractionBar */}
-                  
-                    {/* FIM COMPONENTE: InteractionBar */}
-                  </div>
-                </div>
+                <MemeCard />
                 // FIM COMPONENTE: MemeCard
-              ))}
+
             </div>
 
             <button className={styles.loadMoreButton}>
