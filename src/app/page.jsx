@@ -4,6 +4,7 @@ import Footer from "./components/footer/index.jsx";
 import HeroSection from "./components/heroSection/index.jsx";
 import Feed from "./components/feed/index.jsx";
 import CategoriaSection from "./components/categoriasection";
+import Sidebar from "./components/sidebar";
 
 export default function Home() {
   // Array de dados dos memes para serem passados como props
@@ -283,63 +284,7 @@ export default function Home() {
         </div>
 
         {/* COMPONENTE: Sidebar */}
-        <aside className={styles.sidebar}>
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Eventos Próximos</h3>
-            {upcomingEvents.map((event) => (
-              // COMPONENTE: EventCard
-              <div key={event.id} className={styles.eventCard}>
-                <h4 className={styles.eventTitle}>{event.title}</h4>
-                <p className={styles.eventDate}>{event.date}</p>
-                <p className={styles.eventParticipants}>
-                  {event.participants} participantes
-                </p>
-                <button className={styles.eventButton}>Participar</button>
-              </div>
-              // FIM COMPONENTE: EventCard
-            ))}
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>MemeVerse Premium</h3>
-            <div className={styles.premiumCard}>
-              <h4 className={styles.premiumTitle}>
-                Desbloqueie recursos exclusivos!
-              </h4>
-              <ul className={styles.premiumFeatures}>
-                <li>Sem anúncios</li>
-                <li>Uploads ilimitados</li>
-                <li>Ferramentas de edição avançadas</li>
-                <li>Estatísticas detalhadas</li>
-              </ul>
-              <button className={styles.premiumButton}>
-                Experimentar Grátis
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Tags Populares</h3>
-            <div className={styles.tagCloud}>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #memeday
-              </span>
-              <span className={styles.tag}>#programação</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #humor
-              </span>
-              <span className={styles.tag}>#escola</span>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #trabalhoremoto
-              </span>
-              <span className={styles.tag}>#segundafeira</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #games
-              </span>
-              <span className={styles.tag}>#nofilter</span>
-            </div>
-          </div>
-        </aside>
+        <Sidebar />
         {/* FIM COMPONENTE: Sidebar */}
       </div>
 
