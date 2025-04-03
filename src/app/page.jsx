@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import Header from "./components/header/index.jsx";
 import Footer from "./components/footer/index.jsx";
 import HeroSection from "./components/heroSection/index.jsx";
-import MemeCard from "./components/memecard/index.jsx";
+import Feed from "./components/feed/index.jsx";
 
 export default function Home() {
   // Array de dados dos memes para serem passados como props
@@ -199,31 +199,7 @@ export default function Home() {
           {/* FIM COMPONENTE: CategoriesSection */}
 
           {/* COMPONENTE: Feed */}
-          <section className={styles.feedSection}>
-            <div className={styles.feedHeader}>
-              <h2 className={styles.sectionTitle}>Memes Populares</h2>
-              <div className={styles.feedFilters}>
-                <button className={`${styles.filterButton} ${styles.active}`}>
-                  Recentes
-                </button>
-                <button className={styles.filterButton}>Mais curtidos</button>
-                <button className={styles.filterButton}>Mais comentados</button>
-              </div>
-            </div>
-
-            <div className={styles.feedGrid}>
-              {/* Aqui mapeamos os memes do array para criar múltiplos cards */}
-      
-                // COMPONENTE: MemeCard
-                <MemeCard />
-                // FIM COMPONENTE: MemeCard
-
-            </div>
-
-            <button className={styles.loadMoreButton}>
-              Carregar mais memes
-            </button>
-          </section>
+         
           {/* FIM COMPONENTE: Feed */}
 
           {/* COMPONENTE: FeaturedMemesSection */}
