@@ -173,18 +173,18 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* COMPONENTE: Header */}
-      <Header />
+      <Header logoImg={"⭐"} logoText={"MemeVerse"} navItem1={"Trending"} navItem2={"Create"} navItem3={"Categories"} navItem4={"Profile"}/>
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           {/* COMPONENTE: HeroSection */}
-          <HeroSection />
+          <HeroSection memeOfTheDay={memeOfTheDay} />
           {/* FIM COMPONENTE: HeroSection */}
 
           {/* COMPONENTE: CategoriesSection */}
 
-          <CategoriaSection />
+          <CategoriaSection categories={categories}  />
           {/* FIM COMPONENTE: CategoriesSection */}
 
           {/* COMPONENTE: Feed */}
