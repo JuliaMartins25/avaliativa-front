@@ -17,12 +17,12 @@ const Sidebar = ({upcomingEvent}) => {
             </div>
 
             <div className={styles.sidebarSection}>
-                <PremiumCard />
+                <PremiumCard list1={"Sem anúncios"} list2={"Uploads ilimitados"} list3={"Ferramentas de edição avançadas"} list4={"Estatísticas detalhadas"} />
             </div>
 
             <div className={styles.sidebarSection}>
                 <h3 className={styles.sidebarTitle}>Tags Populares</h3>
-                <Tags/>
+                <Tags tag1={"#memeday"} tag2={"#humor"} tag3={"#trabalhoremoto"} tag4={"#games"}/>
             </div>
         </aside>
     );
