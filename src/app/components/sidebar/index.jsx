@@ -9,8 +9,8 @@ const Sidebar = ({upcomingEvent}) => {
             <div className={styles.sidebarSection}>
                 <h3 className={styles.sidebarTitle}>Eventos Próximos</h3>
                 {upcomingEvent.map((event) => (
-                <EventCard 
-                event={event}
+                <EventCard key={event.id}
+                event={event} 
                 />
             ))}
 

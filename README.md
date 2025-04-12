@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MemeVerse
 
-## Getting Started
+Atividade Avaliativa: Componentização com Props em Next.js 15 
 
-First, run the development server:
+Este é um projeto desenvolvido com [Next.js], que utiliza componentes React para criar uma aplicação interativa e responsiva para explorar memes, categorias, criadores e eventos relacionados.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instruções de Instalação e Execução
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Pré-requisitos
+- Node.js
+- Gerenciador de pacotes como npm
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Passos para Instalação
+1. No terminal do Vscode rode o comando abaixo:
 
-## Learn More
+npx create-next-app@latest nome-do-projeto
 
-To learn more about Next.js, take a look at the following resources:
+Ok to proceed? Y
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Select an example: 
+Typescript: No
+Use ESLint: Yes
+Use Tailwind CSS: No
+`src/` directory: Yes
+use App Router: Yes
+use Turbopack: Yes
+import alias (`@/*` by default): No
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+2. Caso clonar o repositório, siga os passos abaixo:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   git clone https://github.com/JuliaMartins25/avaliativa-front.git   
+             
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Instale as dependências:
+
+   npm install
+
+4. Execute o projeto:
+
+   npm run dev
+
+   
+## Descrição dos componentes
+
+1. Header: 
+    Componente responsável por exibir o cabeçalho da aplicação. Inclui o logotipo, navegação principal e ações do usuário, como login ou acesso ao perfil.
+
+
+2. HeroSection: 
+   Seção de destaque que exibe o "Meme do Dia". Contém título, descrição, autor e estatísticas relacionadas ao meme em destaque.
+
+
+3. CategoriaSection:
+   Lista de categorias de memes, cada uma representada por um ícone e um contador de memes disponíveis.
+
+4. Feed:
+    Lista de categorias de memes, cada uma representada por um ícone e um contador de memes disponíveis.
+
+5. MemeCard:
+    Card individual que exibe informações de um meme, como título, descrição, autor e botões de interação (curtir, comentar, compartilhar).
+
+6. InteractionBar:
+   Barra de interações que acompanha cada meme ou conteúdo. Inclui botões para curtir, comentar, compartilhar e salvar.
+
+7. Sidebar:
+   Barra lateral que exibe informações adicionais, como eventos próximos, recursos premium e tags populares.
+
+8. EventCard:
+    Card que exibe informações sobre eventos, como título, data, número de participantes e um botão de ação (ex.: "Participar").
+
+9. PremiumCard:
+    Componente que promove a assinatura do MemeVerse Premium. Exibe os benefícios exclusivos, como "Sem anúncios", "Uploads ilimitados", "Ferramentas de edição avançadas" e "Estatísticas detalhadas".
+
+10. Tags:
+    Componente que exibe uma lista de tags populares relacionadas aos memes. Cada tag pode ser clicada para filtrar o conteúdo exibido com base na tag selecionada.
+
+11. Footer:
+    Rodapé da aplicação que contém links de navegação, informações sobre a empresa, recursos adicionais e links para redes sociais.
+
+
+## Decisões de design tomadas
+
+- O código foi dividido em componentes reutilizáveis para facilitar a manutenção e escalabilidade do projeto.
+- Cada componente foi projetado para ter uma responsabilidade clara, como o `Header`, `Footer`, `MemeCard`, entre outros.
+- Componentes aninhados foram organizados de forma hierárquica para evitar confusão e melhorar a legibilidade.
+
+
+## Desafios enfrentados e soluções aplicadas
+
+Foi bem difícil encontrar uma maneira de organizar o código em componentes, pois havia muitos componentes dentro de outros componentes, o que tornou a organização bastante complicada. Além disso, utilizei toda a aula para criar esses componentes. Não foi algo sem solução, porém perdi todo o tempo neles e não consegui implementar as props durante a aula, o que foi um grande desafio. Mesmo tendo outra aula sobre props, ainda preciso da ajuda do professor para me explicar diretamente como utilizá-las, pois, com muitos componentes, o número de props aumenta ainda mais, e não consegui encontrar uma solução para finalizá-las.

@@ -2,32 +2,34 @@ import styles from "./feed.module.css";
 import MemeCard from "../memecard";
 
 
-const Feed = () => {
+const Feed = ({memes}) => {
     return (
-        <section className={styles.feedSection}>
-            <div className={styles.feedHeader}>
-                <h2 className={styles.sectionTitle}>Memes Populares</h2>
-                <div className={styles.feedFilters}>
-                    <button className={`${styles.filterButton} ${styles.active}`}>
-                        Recentes
-                    </button>
-                    <button className={styles.filterButton}>Mais curtidos</button>
-                    <button className={styles.filterButton}>Mais comentados</button>
+        <>
+            <section className={styles.feedSection}>
+                <div className={styles.feedHeader}>
+                    <h2 className={styles.sectionTitle}>Memes Populares</h2>
+                    <div className={styles.feedFilters}>
+                        <button className={`${styles.filterButton} ${styles.active}`}>
+                            Recentes
+                        </button>
+                        <button className={styles.filterButton}>Mais curtidos</button>
+                        <button className={styles.filterButton}>Mais comentados</button>
+                    </div>
                 </div>
-            </div>
 
-            <div className={styles.feedGrid}>
-                {/* Aqui mapeamos os memes do array para criar múltiplos cards */}
+                <div className={styles.feedGrid}>
+                    {/* Aqui mapeamos os memes do array para criar múltiplos cards */}
+                        <MemeCard memes={memes} />
 
-                <MemeCard />
 
-            </div>
 
-            <button className={styles.loadMoreButton}>
-                Carregar mais memes
-            </button>
-        </section>
+                </div>
 
+                <button className={styles.loadMoreButton}>
+                    Carregar mais memes
+                </button>
+            </section>
+        </>
     );
 }
 
